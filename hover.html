@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Dropdown Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-item {
+            position: relative;
+            margin: 0 20px;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .nav-item a:hover {
+            background-color: #555;
+        }
+
+        .dropdown {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            padding: 10px 0;
+            display: none;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown li {
+            margin: 0;
+        }
+
+        .dropdown li a {
+            padding: 10px 20px;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .dropdown li a:hover {
+            background-color: #555;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#">MEN</a>
+                <ul class="dropdown">
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#">WOMEN</a>
+                <ul class="dropdown">
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#">KIDS</a>
+                <ul class="dropdown">
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

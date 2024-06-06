@@ -76,25 +76,22 @@ body{
     top: 300px;
     /* transform: translate(55%, -50%); */
 }
-.sheimg{
-    height: 0px;
-    position: relative;;
-}
 .midcontent{
     display: flex;
 }
 .shoeimg img{
     display: flex;
+    top: -600px;
+    bottom: 600px;
+    right: 100px;
     width: 650px;
     height: 900px;
     /* object-fit: cover; */
     transform-origin: center;
     /* top: 200px; */
-    transform: translate(75%, -65%) rotate(-35deg);
+    transform: rotate(-35deg);
     z-index: 2;
     position: relative;
-    position: absolute;
-    display: block;
 }
 
 .shoeimg::before {

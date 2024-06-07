@@ -2,10 +2,10 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    height: 720px;
+    height: 700px;
 }
 .container{
-    height: 700px;
+    height: 650px;
 }
 .head{
     background: #a5a4a4;
@@ -21,6 +21,9 @@ body{
     font-size: 15px;
     transform: translateX(-20px);
 }
+/* .curve{
+    width: 100%;
+} */
 .righthead {
     display: flex;
     list-style: none;
@@ -32,17 +35,16 @@ body{
 .gap{
     cursor:default;
 }
-@media (max-width: 412px) {
-    .navbar {
-        display: flex;
-        display: inline;
-    }
-}
 .navbar{
     background: #ffffff;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+}
+.middlenav ul li a{
+    text-decoration: none;
+    color: black;
+
 }
 .navicon{
     transform: translateX(40px);
@@ -60,14 +62,25 @@ body{
     z-index: 1000;
     cursor: pointer;
 }
-.middlenav li:hover{
+.middlenav li :hover{
     color: #a5a4a4;
+    
+}
+.border-link{
+    height: 2px;
+    width: 0px;
+    background-color: #a5a4a4;
+    transition: all 0.2s ease-in-out;
+}
+.link:hover ~ .border-link{
+    width: 40px;
 }
 .navicon img{
     color: black;
     height: 60px;
     width: auto;
 }
+
 .leftside{
     font-size: 100px;
     width: 200px;
@@ -78,6 +91,7 @@ body{
 }
 .midcontent{
     display: flex;
+    justify-content: center;
 }
 .shoeimg img{
     display: flex;
@@ -118,7 +132,6 @@ p{
     font-size: 20px;
     font-weight: 500;
     color: #7a7a7a;
-
 }
 .price{
     font-size: 30px;
@@ -129,23 +142,20 @@ p{
     color: #a5a4a4;
     z-index: -1;
     position:fixed;
-    top: -50px;
-    right: 300px;
-    width: 130vh;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 120vh;
+    /* transform: translateX(300px); */
+    height: auto;;
+    left: 12%;
 }
 .moreshoes{
     height: 300px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* gap: 50px; */
 }
 .box{
-    width: 300px;
+    width: 400px;
     height: 150px;
     background: #a5a4a4;
     margin: 20px;
@@ -153,6 +163,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 10%;
     cursor: pointer;
     box-shadow: 10px 10px 10px rgba(102, 102, 102, 0.71);
 }
@@ -193,4 +204,90 @@ p{
     font-weight: 500;
     color: #232323;
     transform: translateX(-20px);
+}
+
+/* Media Queries for MOBILE */
+@media only screen and (max-width: 750px) {
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    .head{
+        font-size: 5px;
+        width: 100vh;
+    }
+    .navbar {
+        /* display: flex; */
+        /* display: inline; */
+        width: 100vh;
+    }
+    .curve{
+        width: 100vh;
+    }
+    .middlenav li{
+        font-size: 25px;
+        /* display: none; */
+    }
+    .shoeimg img{
+        width: 550px;
+        height: auto;
+        position: absolute;
+        right: -350px;
+        top: -10px;
+        /* transform: translateX(800px) translateY(200px) rotate(-35deg); */
+    }
+    .shoeimg::before {
+        content: '';
+        position: absolute;
+        top: 600px;
+        left: 135%;
+        /* transform: translateX(-50%); */
+        width: 450px; 
+        height: 50px; 
+        background: rgba(0, 0, 0, 0.5); 
+        border-radius: 50%;
+        z-index: -1; 
+        filter: blur(15px);
+    }
+    .container{
+        /* display: flex; */
+        height: 1300px;
+    }
+    .nikebackground svg{
+        width: 90vh;
+        left: 0;
+    }
+    .moreshoes{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        grid-template-columns: 2fr 2fr;
+        left: 220px;
+    }
+    .box{
+        width: 380px;
+        /* height: 170px; */
+    }
+    hr{
+        width: 100vh;
+    }
+    .rightside{
+        position: absolute;
+        font-size: 40px;
+        right: -500px;
+        top: 450px;
+        /* top: 550px; */
+        /* top: 200px; */
+        }
+    .rightcontent{
+        position: absolute;
+        width: 800px;
+    }
+    .rightcontent p{
+        font-size: 30px;
+    }
+
+
 }

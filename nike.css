@@ -95,17 +95,15 @@ body{
 }
 .shoeimg img{
     display: flex;
-    top: -600px;
-    bottom: 600px;
-    right: 100px;
+    position: absolute;
+    top: -70px;
+    right: 680px; 
     width: 650px;
     height: 900px;
     /* object-fit: cover; */
     transform-origin: center;
-    /* top: 200px; */
     transform: rotate(-35deg);
     z-index: 2;
-    position: relative;
 }
 
 .shoeimg::before {

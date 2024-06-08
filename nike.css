@@ -94,15 +94,16 @@ body{
     justify-content: center;
 }
 .shoeimg img{
-    display: flex;
     position: absolute;
+    display: flex;
     top: -70px;
-    right: 680px; 
+    transform: translateX(-50%) rotate(-35deg);
+    left: 45%;
     width: 650px;
     height: 900px;
     /* object-fit: cover; */
     transform-origin: center;
-    transform: rotate(-35deg);
+    /* top: 200px; */
     z-index: 2;
 }
 
@@ -146,7 +147,7 @@ p{
     left: 12%;
 }
 .moreshoes{
-    height: 300px;
+    height: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -228,10 +229,11 @@ p{
         /* display: none; */
     }
     .shoeimg img{
+        display: flex;
+        position: absolute;
         width: 550px;
         height: auto;
-        position: absolute;
-        right: -350px;
+        left: 120%;
         top: -10px;
         /* transform: translateX(800px) translateY(200px) rotate(-35deg); */
     }

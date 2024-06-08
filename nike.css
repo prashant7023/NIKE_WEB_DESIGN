@@ -29,7 +29,7 @@ body{
     list-style: none;
     gap: 20px;
 }
-.righthead li{
+.righthead .navbarli{
     cursor: pointer;
 }
 .gap{
@@ -41,7 +41,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.middlenav ul li a{
+.middlenav .navbarul .navbarli a{
     text-decoration: none;
     color: black;
 
@@ -50,19 +50,19 @@ body{
     transform: translateX(40px);
     padding: 5px
 }
-.middlenav ul{
+.middlenav .navbarul{
     display: flex;
     list-style: none;
     gap: 50px;
     font-weight: 500;
     font-size: large;
 }
-.middlenav li{
+.middlenav .navbarli{
     /* padding: 2px; */
     z-index: 1000;
     cursor: pointer;
 }
-.middlenav li :hover{
+.middlenav .navbarli :hover{
     color: #a5a4a4;
     
 }
@@ -79,6 +79,77 @@ body{
     color: black;
     height: 60px;
     width: auto;
+}
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+.dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    background-color: #ffffff;
+    right: 0;
+    height: auto; /* Adjust height as needed */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 5px rgba(102, 102, 102, 0.71);
+}
+
+.menu1 {
+    /* flex: 1; */
+    min-width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+    
+.menu {
+    right: 10%;
+    transform: translateX(10%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 1; /*Adjust this value for more columns */
+    column-gap: 20px;
+}
+
+.menu li {
+    color: #232323;
+    font-size: 16px;
+    break-inside: avoid-column;
+}
+
+.heading {
+    font-weight: bold;
+    break-after: always; /* Ensure heading is at the top of a new column */
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 .leftside{
